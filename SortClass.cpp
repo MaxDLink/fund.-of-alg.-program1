@@ -36,7 +36,7 @@ int SortClass::count() //returns the number of items in the array
    return array.size();
 }
 
-int SortClass::getSwapCount() //returns teh current value of swapCount 
+int SortClass::getSwapCount() //returns the current value of swapCount 
 {
    return swapCount;
 }
@@ -81,7 +81,7 @@ ostream& operator<<(ostream& os, SortClass& s) //output the content of the array
     return os;
 }
 
-istream& operator>>(istream& is, SortClass& s)//read the value of the items from teh input stream (items are stored from the first item to the last)
+istream& operator>>(istream& is, SortClass& s)//read the value of the items from the input stream (items are stored from the first item to the last)
 {
     for (int i = 0; i < s.array.size(); i++)
 	{
