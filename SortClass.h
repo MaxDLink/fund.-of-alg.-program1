@@ -28,8 +28,8 @@ public:
 private:
 
 
-    int swapCount;
-    vector<float> array;
+    int swapCount; //keeps track fo how many swaps have occurred 
+    vector<float> array; //vector array that contains floating point numbers to be sorted 
 
 };
 

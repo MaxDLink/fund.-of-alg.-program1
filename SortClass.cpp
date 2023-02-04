@@ -7,7 +7,7 @@
 using namespace std;
 
 
-SortClass::SortClass(int n, bool genRandom)
+SortClass::SortClass(int n, bool genRandom) //create a sortclass object that stores n items. Every # randomly gen if genRandom is set to true. Otherwise every # is 0.0 
 {
     swapCount = 0;
     if (genRandom) 
@@ -23,7 +23,7 @@ SortClass::SortClass(int n, bool genRandom)
 	}
 }
 
-SortClass::SortClass(const SortClass& st)
+SortClass::SortClass(const SortClass& st) //copy constructor 
 {
    swapCount = st.swapCount;
    for (int i = 0 ; i < st.array.size(); i++)
@@ -31,17 +31,17 @@ SortClass::SortClass(const SortClass& st)
 
 }
 
-int SortClass::count()
+int SortClass::count() //returns the number of items in the array 
 {
    return array.size();
 }
 
-int SortClass::getSwapCount()
+int SortClass::getSwapCount() //returns teh current value of swapCount 
 {
    return swapCount;
 }
 
-void SortClass::clear(bool genRandom)
+void SortClass::clear(bool genRandom) //if genRandom is true, than assign a random value to each itme of the SortClass array. Otherwise, sets every item of the array to be 0. Reset swapCount to 0
 {
     swapCount = 0;
     if (genRandom) 
@@ -57,12 +57,12 @@ void SortClass::clear(bool genRandom)
 	}
 }
 
-bool SortClass::lessthan(int i, int j)
+bool SortClass::lessthan(int i, int j) //returns true iff array[i] < array[j]
 {
    return (array[i] < array[j]);
 }
 
-void SortClass::swap(int i, int j)
+void SortClass::swap(int i, int j) //swap array[i] with array[j]; increment swapCount by 1
 {
     float temp = array[i];
     array[i] = array[j];
@@ -70,7 +70,7 @@ void SortClass::swap(int i, int j)
     swapCount++;
 }
 
-ostream& operator<<(ostream& os, SortClass& s)
+ostream& operator<<(ostream& os, SortClass& s) //output the content of the array. Add a newline character for every 10 items output 
 {
     for (int i = 0; i < s.array.size(); i++)
 	{
@@ -81,7 +81,7 @@ ostream& operator<<(ostream& os, SortClass& s)
     return os;
 }
 
-istream& operator>>(istream& is, SortClass& s)
+istream& operator>>(istream& is, SortClass& s)//read the value of the items from teh input stream (items are stored from the first item to the last)
 {
     for (int i = 0; i < s.array.size(); i++)
 	{

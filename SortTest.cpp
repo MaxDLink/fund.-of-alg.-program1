@@ -2,7 +2,7 @@
 #include "SortClass.h"
 
 
-void insertionSort(SortClass &s)
+void insertionSort(SortClass &s) //sort the items in s by insertion sort 
 {
     for (int j = 1; j < s.count(); j++)
 	{
@@ -18,7 +18,7 @@ void insertionSort(SortClass &s)
 int main()
 {
 
-    SortClass  st(20);
+    SortClass st(20);
 
     cout << st << endl; 
     insertionSort(st);
