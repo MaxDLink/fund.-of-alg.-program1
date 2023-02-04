@@ -18,10 +18,10 @@ void insertionSort(SortClass &s) //sort the items in s by insertion sort
 int main()
 {
 
-    SortClass st(20);
+    SortClass st(20); //call SortClass 
 
     cout << st << endl; 
-    insertionSort(st);
+    insertionSort(st); //call insertion sort 
     cout << "------\n";
     cout << st << endl; 
     cout << "Swap count : " << st.getSwapCount() << endl;
