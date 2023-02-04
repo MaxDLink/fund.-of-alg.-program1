@@ -16,8 +16,6 @@ for(int k = 1; k < s.count(); k++){
 		   i = i - h; 
 		}
 	} 
-
-
 }
    
 

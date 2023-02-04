@@ -20,11 +20,15 @@ int main()
 
     SortClass st(20); //call SortClass 
 
-    cout << st << endl; 
+    cout << "UNSORTED: " << st << endl; 
     insertionSort(st); //call insertion sort 
     cout << "------\n";
+    cout << "Insertion sort: " << endl; 
     cout << st << endl; 
     cout << "Swap count : " << st.getSwapCount() << endl;
+
+    cout << "ShellSort: " << endl; 
+    ShellSort(st, 1); 
    
     return 0;
 }
