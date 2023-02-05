@@ -18,7 +18,7 @@ void insertionSort(SortClass &s)
 int main()
 {
 
-    SortClass  st(20);
+    SortClass st(20);
 
     cout << st << endl; 
     insertionSort(st);
