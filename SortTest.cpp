@@ -64,7 +64,8 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
     else{//runs if code is 0, 1, 2, 3 
             //[20, 5, 40, 60, 10, 30] <-- array 
         for (int k = 0; k <= code; k++){ //loops through code int. 
-            // int h = 3 * k + 1; //TODO - what is hlist? Knuth's formula
+            // int h = 3 * k + 1; 
+            //TODO - create array for each code == 0, 1, 2, 3 
             int h = 1; 
             if(code == 0){//h = 1 
                 cout << "H: " << h << endl; 
