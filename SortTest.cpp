@@ -60,11 +60,31 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
  if(code > 3){//exits program if code is not 0, 1, 2, 3
         cout << "Code was not 0, 1, 2, or 3. Exiting program!" << endl; 
         return; //returns to exit function; 
-    }else{//runs if code is 0, 1, 2, 3 
+    }
+    else{//runs if code is 0, 1, 2, 3 
             //[20, 5, 40, 60, 10, 30] <-- array 
-        for (int k = 0; k < code; k++){ //loops through code int. 
-            int h = 3 * k + 1; //TODO - what is hlist? Knuth's formula
-            cout << "KNUTH FORMULA: " << h << endl; 
+        for (int k = 0; k <= code; k++){ //loops through code int. 
+            // int h = 3 * k + 1; //TODO - what is hlist? Knuth's formula
+            int h = 1; 
+            if(code == 0){//h = 1 
+                cout << "H: " << h << endl; 
+            }if(code == 1){//h = k^2
+                h = k*k;  
+                cout << "H: " << h << endl; 
+            }if(code == 2){//h = 2^k -1 
+                for(int p = 1; p <= k; p++){
+                    h *= 2; //multiply h by 2 until get to k 
+                }
+                h = h-1;
+                cout << "H: " << h << endl; 
+            }if(code == 3){//h = (3^k-1)/2
+               for(int p = 1; p <= k; p++){
+                    h *= 2; //multiply h by 2 until get to k 
+                }
+                h = h-1;
+                h = h/2; 
+                cout << "H: " << h << endl; 
+            }
             for (int j = 1; j < s.count(); j++) 
         {
         int i = j; //sets i = 1. Here, j and i both have index 1 [5]
@@ -91,40 +111,20 @@ int main()
 
     SortClass st(20); //call SortClass 
 
-    // cout << "UNSORTED: " << st << endl; 
-    // insertionSort(st); //call insertion sort 
-    // cout << "------\n";
-    // cout << "Insertion sort: " << endl; 
-    // cout << st << endl; 
-    // cout << "Swap count : " << st.getSwapCount() << endl;
-
+    SortClass ss(20); //call SortClass 
     cout << "UNSORTED: " << st << endl; 
-    ShellSort(st, 1); //TODO - Knuth number? 
+    insertionSort(st); //call insertion sort 
     cout << "------\n";
-    cout << "Shell sort: " << endl; 
+    cout << "Insertion sort: " << endl; 
     cout << st << endl; 
     cout << "Swap count : " << st.getSwapCount() << endl;
 
-    // cout << "-----ShellSort Test------" << endl; 
-
-    // int arr[] = {12, 34, 54, 2, 3}; 
-    // int n = sizeof(arr)/sizeof(arr[0]); 
-
-    // cout << "Array before sorting: " << "\n"; 
-    // printArray(arr, n); 
-
-    // shellSortTest(arr, n); //shellsort function above 
-
-    // cout << "\narray after sorting \n"; 
-
-    // printArray(arr, n); 
-
-    // cout << "Insertion Sort Test: " << endl; 
-    // cout << "Array Before sorting: " << endl; 
-    // printArray(arr, n); 
-    // cout << "\narray after sorting \n"; 
-    // insertionSortTest(arr, n); 
-    // printArray(arr, n); 
+    cout << "UNSORTED: " << ss << endl; 
+    ShellSort(ss, 3); 
+    cout << "------\n";
+    cout << "Shell sort: " << endl; 
+    cout << ss << endl; 
+    cout << "Swap count : " << ss.getSwapCount() << endl;
    
     return 0;
 }
