@@ -18,6 +18,7 @@ void insertionSort(SortClass &s)
 int main()
 {
 
+    cout << "This is the default code in main" << endl; 
     SortClass  st(20);
 
     cout << st << endl; 
@@ -25,6 +26,6 @@ int main()
     cout << "------\n";
     cout << st << endl; 
     cout << "Swap count : " << st.getSwapCount() << endl;
-   
+    
     return 0;
 }
