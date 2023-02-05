@@ -57,8 +57,19 @@ int shellSortTest(int arr[], int n){
 }
 
 void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the SortClass object, code: an integer denoting how the hlist array is to be formed (0, 1, 2, 3, print error message & exit program)
-
-//TODO - make shellsort function here modelled after above shellsort 
+    //[20, 5, 40, 60, 10, 30] <-- array 
+    for (int k = 1; k < s.count(); k++){
+        int h = hlist[k]; //TODO - what is hlist? Knuth's formula
+        for (int j = 1; j < s.count(); j++) 
+	{
+	   int i = j; //sets i = 1. Here, j and i both have index 1 [5]
+	   while ((i >= 0) && (s.lessthan(i, i-h))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
+		{
+		   s.swap(i-h, i); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20. 
+		   i = i - h; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
+		}
+	} 
+    }
 
 }
 
