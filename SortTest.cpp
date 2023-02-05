@@ -18,7 +18,6 @@ void insertionSort(SortClass &s)
 int main()
 {
 
-    cout << "This is the default code in main" << endl; 
     SortClass  st(20);
 
     cout << st << endl; 
