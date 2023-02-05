@@ -58,7 +58,7 @@ int shellSortTest(int arr[], int n){
 
 void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the SortClass object, code: an integer denoting how the hlist array is to be formed (0, 1, 2, 3, print error message & exit program)
     //[20, 5, 40, 60, 10, 30] <-- array 
-    for (int k = 0; k < s.count(); k++){
+    for (int k = 0; k < code; k++){ //loops through code int. 
         int h = 3 * k + 1; //TODO - what is hlist? Knuth's formula
         cout << "KNUTH FORMULA: " << h << endl; 
         for (int j = 1; j < s.count(); j++) 
@@ -74,31 +74,35 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
 
 }
 
-void printArray(int arr[], int n){
-    for(int i = 0; i < n; i++){
-        cout << arr[i] << " "; 
-    }
-}
+// void printArray(int arr[], int n){
+//     for(int i = 0; i < n; i++){
+//         cout << arr[i] << " "; 
+//     }
+// }
 
 int main()
 {
 
     SortClass st(20); //call SortClass 
 
+    // cout << "UNSORTED: " << st << endl; 
+    // insertionSort(st); //call insertion sort 
+    // cout << "------\n";
+    // cout << "Insertion sort: " << endl; 
+    // cout << st << endl; 
+    // cout << "Swap count : " << st.getSwapCount() << endl;
+
     cout << "UNSORTED: " << st << endl; 
-    insertionSort(st); //call insertion sort 
+    ShellSort(st, 3); //HOW TO CALL? 
     cout << "------\n";
-    cout << "Insertion sort: " << endl; 
+    cout << "Shell sort: " << endl; 
     cout << st << endl; 
     cout << "Swap count : " << st.getSwapCount() << endl;
 
-    // cout << "ShellSort: " << endl; 
-    //ShellSort(st, 1); //HOW TO CALL? 
-
     // cout << "-----ShellSort Test------" << endl; 
 
-    int arr[] = {12, 34, 54, 2, 3}; 
-    int n = sizeof(arr)/sizeof(arr[0]); 
+    // int arr[] = {12, 34, 54, 2, 3}; 
+    // int n = sizeof(arr)/sizeof(arr[0]); 
 
     // cout << "Array before sorting: " << "\n"; 
     // printArray(arr, n); 
@@ -109,12 +113,12 @@ int main()
 
     // printArray(arr, n); 
 
-    cout << "Insertion Sort Test: " << endl; 
-    cout << "Array Before sorting: " << endl; 
-    printArray(arr, n); 
-    cout << "\narray after sorting \n"; 
-    insertionSortTest(arr, n); 
-    printArray(arr, n); 
+    // cout << "Insertion Sort Test: " << endl; 
+    // cout << "Array Before sorting: " << endl; 
+    // printArray(arr, n); 
+    // cout << "\narray after sorting \n"; 
+    // insertionSortTest(arr, n); 
+    // printArray(arr, n); 
    
     return 0;
 }
