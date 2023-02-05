@@ -57,17 +57,17 @@ void SortClass::clear(bool genRandom) //if genRandom is true, than assign a rand
 	}
 }
 
-bool SortClass::lessthan(int i, int j) //returns true iff array[i] < array[j]
+bool SortClass::lessthan(int i, int j) //returns true iff array[i] < array[j]. i = 1. j = 0. 
 {
-   return (array[i] < array[j]);
+   return (array[i] < array[j]); //compares 5 and 20. returns true because 5 is less than 20 
 }
 
 void SortClass::swap(int i, int j) //swap array[i] with array[j]; increment swapCount by 1
 {
-    float temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-    swapCount++;
+    float temp = array[i]; //arr[0] == 20 
+    array[i] = array[j]; //arr[0] = arr[1]. 20 = 5 
+    array[j] = temp; //arr[1] = 20. 
+    swapCount++; //keeps track of amount of swaps for later 
 }
 
 ostream& operator<<(ostream& os, SortClass& s) //output the content of the array. Add a newline character for every 10 items output 
