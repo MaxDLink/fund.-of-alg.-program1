@@ -146,9 +146,9 @@ int shellSortTest(int arr[], int n){
 int main()
 {
 
-    SortClass st(20); //call SortClass 
+    SortClass st(6); //call SortClass 
 
-    SortClass ss(20); //call SortClass 
+    SortClass ss(6); //call SortClass 
     cout << "UNSORTED: " << st << endl; 
     insertionSort(st); //call insertion sort 
     cout << "------\n";
@@ -157,7 +157,7 @@ int main()
     cout << "Swap count : " << st.getSwapCount() << endl;
 
     cout << "UNSORTED: " << ss << endl; 
-    ShellSort(ss, 0); 
+    ShellSort(ss, 3); 
     cout << "------\n";
     cout << "Shell sort: " << endl; 
     cout << ss << endl; 
