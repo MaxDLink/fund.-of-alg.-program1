@@ -157,7 +157,7 @@ int main()
     cout << "Swap count : " << st.getSwapCount() << endl;
 
     cout << "UNSORTED: " << ss << endl; 
-    ShellSort(ss, 3); 
+    ShellSort(ss, 0); 
     cout << "------\n";
     cout << "Shell sort: " << endl; 
     cout << ss << endl; 
