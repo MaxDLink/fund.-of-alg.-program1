@@ -71,8 +71,22 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
             if(code == 0){//h = 1 
                 h = 1; //h is 1 so program does insertion sort 
             }if(code == 1){//h = k^2
-                
-            }if(code == 2){//h = 2^k -1 
+                int g = 1; 
+                int l = 0; 
+                while(g < s.count()){
+                    l = g * g; 
+                    hlist.push_back(l); 
+                    g++; 
+                }
+                 //print vector 
+                reverse(hlist.begin(), hlist.end());
+                cout << "HList: " << endl; 
+                    for(int k = 0; k < hlist.size(); k++){
+                        cout << hlist.at(k) << " "; 
+                    }
+                cout << endl; 
+
+            }if(code == 2){//h = 2^k -1. hibbard sequence. 
                 int l = 0; 
                 int g = 0; 
                 while(g < s.count()){
@@ -82,9 +96,6 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
                     g = (pow(2, l)) - 1; 
                     //cout << "\nG before push: " << g << endl; 
                     hlist.push_back(g); 
-                     
-
-                    
                 }
                 //print vector 
                 reverse(hlist.begin(), hlist.end());
@@ -131,7 +142,7 @@ int main()
     cout << "Swap count : " << st.getSwapCount() << endl;
 
     cout << "UNSORTED: " << ss << endl; 
-    ShellSort(ss, 2); 
+    ShellSort(ss, 1); 
     cout << "------\n";
     cout << "Shell sort: " << endl; 
     cout << ss << endl; 
