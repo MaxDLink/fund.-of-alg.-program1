@@ -23,12 +23,13 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
     }
     else{//runs if code is 0, 1, 2, 3 
             //[20, 5, 40, 60, 10, 30] <-- array 
-       for (int k = 0; k < s.count(); k++){ //loops through code int. 
+       for (int k = 0; k < s.count()-1; k++){ //loops through code int. 
             // int h = 3 * k + 1; //TODO - what is hlist? Knuth's formula
             vector <int> hlist; //empty hlist vector
 			int h = 0;  
             if(code == 0){//h = 1 
-                hlist[0] = 1; //h is 1 so program does insertion sort 
+              // hlist[0] = 1; //h is 1 so program does insertion sort 
+			   h = 1; 
             }if(code == 1){//h = k^2
                 int g = 1; 
                 int l = 0; 
@@ -40,7 +41,10 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
                  //print vector 
                 reverse(hlist.begin(), hlist.end());
               
-				printVector(hlist); 
+				//printVector(hlist);
+
+				h = hlist[k]; //sets your h value for swap below 
+				
 
             }if(code == 2){//h = 2^k -1. hibbard sequence. 
                 int l = 0; 
@@ -56,7 +60,10 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
                 //print vector 
                 reverse(hlist.begin(), hlist.end());
              
-				printVector(hlist); 
+				// printVector(hlist); 
+
+				h = hlist[k]; //sets your h value for swap below
+				
             }if(code == 3){//h = (3^k-1)/2
                 int l = 0; 
                 int g = 0; 
@@ -70,10 +77,13 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
                 //print vector 
                 reverse(hlist.begin(), hlist.end());
 
-				printVector(hlist); 
+				// printVector(hlist); 
+
+				h = hlist[k]; //sets your h value for swap below
+				
             }
-			h = hlist[k]; //sets your h value for swap below
-			// cout << "H: " << h << endl;  
+			// h = hlist[k]; //sets your h value for swap below
+			cout << "H: " << h << endl;  
             for (int j = 1; j < s.count(); j++) 
         {
         int i = j; //sets i = 1. Here, j and i both have index 1 [5]
@@ -83,7 +93,7 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
                 i = i - h; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
             }
         } 
-       } //end of for loop for hlist array 
+      } //end of for loop for hlist array 
     }
     
 
