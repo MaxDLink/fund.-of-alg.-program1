@@ -105,7 +105,22 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
                     }
                 cout << endl; 
             }if(code == 3){//h = (3^k-1)/2
-              
+                int l = 0; 
+                int g = 0; 
+                while(g < s.count()){
+                    l += 1; 
+                    g = ((pow(3, l)) -1)/2; 
+
+                    hlist.push_back(g); 
+
+                }
+                //print vector 
+                reverse(hlist.begin(), hlist.end());
+                cout << "HList: " << endl; 
+                    for(int k = 0; k < hlist.size(); k++){
+                        cout << hlist.at(k) << " "; 
+                    }
+                cout << endl; 
             }
             for (int j = 1; j < s.count(); j++) 
         {
@@ -142,7 +157,7 @@ int main()
     cout << "Swap count : " << st.getSwapCount() << endl;
 
     cout << "UNSORTED: " << ss << endl; 
-    ShellSort(ss, 1); 
+    ShellSort(ss, 3); 
     cout << "------\n";
     cout << "Shell sort: " << endl; 
     cout << ss << endl; 
