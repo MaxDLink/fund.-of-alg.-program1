@@ -1,7 +1,8 @@
 #include <iostream>
 #include "SortClass.h"
-
-
+#include "vector" //TODO - take out vector and add to MySortClass later 
+#include <cmath> //TODO - take out cmath and add to MySortClass later 
+#include <algorithm> //TODO - take out reverse and add to MySortClass later 
 // Function to sort an array using
 // insertion sort
 void insertionSortTest(int arr[], int n) //takes in array and size of array 
@@ -63,28 +64,44 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
     }
     else{//runs if code is 0, 1, 2, 3 
             //[20, 5, 40, 60, 10, 30] <-- array 
+<<<<<<< Updated upstream
         for (int k = 0; k <= code; k++){ //loops through code int. 
             // int h = 3 * k + 1; 
             //TODO - create array for each code == 0, 1, 2, 3 
             int h = 1; 
+=======
+       // for (int k = 0; k < s.count(); k++){ //loops through code int. 
+            // int h = 3 * k + 1; //TODO - what is hlist? Knuth's formula
+            int h = 0; 
+            vector <int> hlist; //empty hlist vector 
+>>>>>>> Stashed changes
             if(code == 0){//h = 1 
-                cout << "H: " << h << endl; 
+                h = 1; //h is 1 so program does insertion sort 
             }if(code == 1){//h = k^2
-                h = k*k;  
-                cout << "H: " << h << endl; 
+                
             }if(code == 2){//h = 2^k -1 
-                for(int p = 1; p <= k; p++){
-                    h *= 2; //multiply h by 2 until get to k 
+                int l = 0; 
+                int g = 0; 
+                while(g < s.count()){
+                    //cout << "S: " << s.count() << endl; 
+                    l += 1; 
+                    //cout << "L: " << l << endl; 
+                    g = (pow(2, l)) - 1; 
+                    //cout << "\nG before push: " << g << endl; 
+                    hlist.push_back(g); 
+                     
+
+                    
                 }
-                h = h-1;
-                cout << "H: " << h << endl; 
+                //print vector 
+                reverse(hlist.begin(), hlist.end());
+                cout << "HList: " << endl; 
+                    for(int k = 0; k < hlist.size(); k++){
+                        cout << hlist.at(k) << " "; 
+                    }
+                cout << endl; 
             }if(code == 3){//h = (3^k-1)/2
-               for(int p = 1; p <= k; p++){
-                    h *= 2; //multiply h by 2 until get to k 
-                }
-                h = h-1;
-                h = h/2; 
-                cout << "H: " << h << endl; 
+              
             }
             for (int j = 1; j < s.count(); j++) 
         {
@@ -95,7 +112,7 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
             i = i - h; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
             }
         } 
-        }
+        //}
     }
     
 
@@ -121,7 +138,7 @@ int main()
     cout << "Swap count : " << st.getSwapCount() << endl;
 
     cout << "UNSORTED: " << ss << endl; 
-    ShellSort(ss, 3); 
+    ShellSort(ss, 2); 
     cout << "------\n";
     cout << "Shell sort: " << endl; 
     cout << ss << endl; 
