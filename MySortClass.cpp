@@ -46,23 +46,28 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
 				h = hlist[k]; //sets your h value for swap below 
 				
 
-            }if(code == 2){//h = 2^k -1. hibbard sequence. 
+            }if(code == 2){//h = 2^k -1. hibbard sequence. 1, 3, 7, 15, 31
                 int l = 0; 
                 int g = 0; 
-                while(g < s.count()){
+                while(g < s.count()){//stops at h = 31 
                     //cout << "S: " << s.count() << endl; 
                     l += 1; 
                     //cout << "L: " << l << endl; 
                     g = (pow(2, l)) - 1; 
                     //cout << "\nG before push: " << g << endl; 
-                    hlist.push_back(g); 
+                    hlist.push_back(g);
                 }
                 //print vector 
                 reverse(hlist.begin(), hlist.end());
              
 				// printVector(hlist); 
-
+				//TODO - k is accessing null indexes???? Should only have 5 filled out indexes and stop at 1 to do insertion sort. 
+				//K accessing null indexes is reason for seg fault 
 				h = hlist[k]; //sets your h value for swap below
+				
+				
+			
+			
 				
             }if(code == 3){//h = (3^k-1)/2
                 int l = 0; 
@@ -83,7 +88,7 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
 				
             }
 			// h = hlist[k]; //sets your h value for swap below
-			cout << "H: " << h << endl;  
+			//cout << "H: " << h << endl;  
             for (int j = 1; j < s.count(); j++) 
         {
         int i = j; //sets i = 1. Here, j and i both have index 1 [5]
