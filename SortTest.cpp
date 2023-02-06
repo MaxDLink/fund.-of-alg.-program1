@@ -64,17 +64,10 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
     }
     else{//runs if code is 0, 1, 2, 3 
             //[20, 5, 40, 60, 10, 30] <-- array 
-<<<<<<< Updated upstream
-        for (int k = 0; k <= code; k++){ //loops through code int. 
-            // int h = 3 * k + 1; 
-            //TODO - create array for each code == 0, 1, 2, 3 
-            int h = 1; 
-=======
        // for (int k = 0; k < s.count(); k++){ //loops through code int. 
             // int h = 3 * k + 1; //TODO - what is hlist? Knuth's formula
             int h = 0; 
             vector <int> hlist; //empty hlist vector 
->>>>>>> Stashed changes
             if(code == 0){//h = 1 
                 h = 1; //h is 1 so program does insertion sort 
             }if(code == 1){//h = k^2
@@ -108,8 +101,8 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
         int i = j; //sets i = 1. Here, j and i both have index 1 [5]
         while ((i >= 0) && (s.lessthan(i, i-h))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
             {
-            s.swap(i-h, i); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20. 
-            i = i - h; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
+                s.swap(i-h, i); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20. 
+                i = i - h; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
             }
         } 
         //}
