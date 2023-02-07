@@ -58,7 +58,7 @@ int shellSortTest(int arr[], int n){
 int main()
 {
 
-    SortClass st(500); //call SortClass 
+    SortClass st(6); //call SortClass 
     SortClass unsorted = st; //stores unsorted st 
     //SortClass ss(500); //call SortClass 
 
@@ -70,7 +70,7 @@ int main()
     cout << "Swap count : " << st.getSwapCount() << endl; 
 
     cout << "UNSORTED: " << unsorted << endl; 
-    ShellSort(unsorted, 0); 
+    ShellSort(unsorted, 1); 
     cout << "------\n";
     cout << "Shell sort: " << endl; 
     cout << unsorted << endl; 
