@@ -73,10 +73,10 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
             }
 
 			h = hlist[k]; //sets your h value for swap below
-            if(h == 0){
+            if(h == 0){//TODO - fix this so that h is 1 after 
                 h = 1; 
             }
-			//cout << "H: " << h << endl;  
+			cout << "H: " << h << endl;  
        
         for (int j = 1; j < s.count(); j++) {
             int i = j; //sets i = 1. Here, j and i both have index 1 [5]
