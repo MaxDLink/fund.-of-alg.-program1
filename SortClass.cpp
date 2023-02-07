@@ -58,7 +58,8 @@ void SortClass::clear(bool genRandom) //if genRandom is true, than assign a rand
 }
 
 bool SortClass::lessthan(int i, int j) //returns true iff array[i] < array[j]. i = 1. j = 0. 
-{
+{	
+   cout << "element at arr[i]: " << array[i] << " And element at arr[j]: " << array[j] << endl; 
    return (array[i] < array[j]); //compares 5 and 20. returns true because 5 is less than 20 
 }
 

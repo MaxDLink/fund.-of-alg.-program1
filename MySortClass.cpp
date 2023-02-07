@@ -15,11 +15,7 @@ void printVector(vector <int> vect){
     }
 	cout << endl; 
 }
-//TODO - fix ShellSort math so that it sorts the same as insertion sort. Algo should only have 1 once and the array should end at that point. Math incorrect for 1, 2, 3 
-//1. create hlist 
-//2. go through hlist and make subarrays 
-//3. combine subarrays into one sorted list 
-//4. do insertion sort at the end when hlist = 1 
+//TODO - fix ShellSort math so that it sorts the same as insertion sort. Algo should only have 1 once and the array should end at that point. 
 void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the SortClass object, code: an integer denoting how the hlist array is to be formed (0, 1, 2, 3, print error message & exit program)
  if(code > 3){//exits program if code is not 0, 1, 2, 3
         cout << "Code was not 0, 1, 2, or 3. Exiting program!" << endl; 
@@ -28,6 +24,7 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
     else{//runs if code is 0, 1, 2, 3 
             //[20, 5, 40, 60, 10, 30] <-- array 
        //for (int k = 0; k < s.count(); k++){ //loops through code int. 
+       cout << "SCOUNT: " << s.count() << endl; 
             vector <int> hlist; //empty hlist vector
 			int h = 0;  
             if(code == 0){//h = 1 
@@ -39,10 +36,11 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
             }if(code == 1){//h = k^2 //works because you are always guaranteed 6 unique numbers 
                 int g = 1; 
                 int l = 0; 
-                while(g <= s.count()){
+                while(l < s.count()){
                     l = g * g; 
                     hlist.push_back(l); 
                     g++; 
+                    l = g * g; //TODO - need this line? 
                 }
                  //print vector 
                 reverse(hlist.begin(), hlist.end());	
@@ -75,40 +73,19 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
                 reverse(hlist.begin(), hlist.end());
 				
             }
+            for(int j = 0; j < hlist.size(); j++){//now do a swap for every h in the hlist array 
+                h = hlist[j]; //4
+                cout << "H is: " << h << endl; 
 
-			//h = hlist[k]; //sets your h value for swap below
-            for(int i = 0; i < hlist.size(); i++){
-                h = hlist[i]; 
-                if(h < s.count()){//only set h to value that is less than amount of numbers 
-                    h = hlist[i]; 
-                    cout << "HLIST AT " << i << " is: " << hlist[i] << endl; 
-                    cout << "H: " << h << endl; 
-                    //TODO - hlist is formed and now the swap has to happen here 
-                }
-
-        //     for (int j = 1; j < s.count(); j++) {
-        //         int i = j; //sets i = 1. Here, j and i both have index 1 [5]
-        //         while ((i >= 0) && (s.lessthan(i, i-h))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
-        //             {
-        //                 s.swap(i-h, i); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20. 
-        //                 i = i - h; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
-        //             }
-        // } 
+                int i = j; //sets i = 1. Here, j and i both have index 1 [5]
+                while ((i >= 0) && (s.lessthan(i, i-h))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
+                    {
+                        cout << "SWAPPING" << endl; 
+                        s.swap(i+h, i); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20. 
+                        i = i + h; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
+                    }
+               
             }
-            // if(h == 0){//TODO - fix this so that h is 1 after 
-            //     h = 1; 
-            // }
-			// cout << "H: " << h << endl;  
-       
-        // for (int j = 1; j < s.count(); j++) {
-        //     int i = j; //sets i = 1. Here, j and i both have index 1 [5]
-        //     while ((i >= 0) && (s.lessthan(i, i-h))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
-        //         {
-        //             s.swap(i-h, i); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20. 
-        //             i = i - h; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
-        //         }
-        // } 
-      //} //end of for loop for hlist array 
     }
     
 
