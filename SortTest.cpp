@@ -61,8 +61,8 @@ int main()
 {
 
     SortClass st(500); //call SortClass 
-
-    SortClass ss(500); //call SortClass 
+    SortClass unsorted = st; //stores unsorted st 
+    //SortClass ss(500); //call SortClass 
 
     cout << "UNSORTED: " << st << endl; 
     insertionSort(st); //call insertion sort 
@@ -71,12 +71,12 @@ int main()
     cout << st << endl; 
     cout << "Swap count : " << st.getSwapCount() << endl; 
 
-    cout << "UNSORTED: " << ss << endl; 
-    ShellSort(ss, 3); 
+    cout << "UNSORTED: " << unsorted << endl; 
+    ShellSort(unsorted, 3); 
     cout << "------\n";
     cout << "Shell sort: " << endl; 
-    cout << ss << endl; 
-    cout << "Swap count : " << ss.getSwapCount() << endl;
+    cout << unsorted << endl; 
+    cout << "Swap count : " << unsorted.getSwapCount() << endl;
    
     return 0;
 }
