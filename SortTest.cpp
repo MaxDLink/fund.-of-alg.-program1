@@ -1,8 +1,6 @@
 #include <iostream>
 #include "SortClass.h"
-// #include "vector" //TODO - take out vector and add to MySortClass later 
-// #include <cmath> //TODO - take out cmath and add to MySortClass later 
-// #include <algorithm> //TODO - take out reverse and add to MySortClass later 
+//TODO - how will main work with the default code? 
 // Function to sort an array using
 // insertion sort
 void insertionSortTest(int arr[], int n) //takes in array and size of array 
