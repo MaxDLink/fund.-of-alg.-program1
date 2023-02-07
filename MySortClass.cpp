@@ -15,7 +15,7 @@ void printVector(vector <int> vect){
     }
 	cout << endl; 
 }
-
+//TODO - fix ShellSort math so that it sorts the same as insertion sort 
 void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the SortClass object, code: an integer denoting how the hlist array is to be formed (0, 1, 2, 3, print error message & exit program)
  if(code > 3){//exits program if code is not 0, 1, 2, 3
         cout << "Code was not 0, 1, 2, or 3. Exiting program!" << endl; 
@@ -76,7 +76,7 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
             if(h == 0){
                 h = 1; 
             }
-			cout << "H: " << h << endl;  
+			//cout << "H: " << h << endl;  
        
         for (int j = 1; j < s.count(); j++) {
             int i = j; //sets i = 1. Here, j and i both have index 1 [5]
