@@ -41,7 +41,7 @@ int SortClass::getSwapCount() //returns the current value of swapCount
    return swapCount;
 }
 
-void SortClass::clear(bool genRandom) //if genRandom is true, than assign a random value to each itme of the SortClass array. Otherwise, sets every item of the array to be 0. Reset swapCount to 0
+void SortClass::clear(bool genRandom) //if genRandom is true, than assign a random value to each item of the SortClass array. Otherwise, sets every item of the array to be 0. Reset swapCount to 0
 {
     swapCount = 0;
     if (genRandom) 
