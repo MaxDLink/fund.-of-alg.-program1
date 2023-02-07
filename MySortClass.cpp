@@ -81,7 +81,9 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
                 h = hlist[i]; 
                 if(h < s.count()){//only set h to value that is less than amount of numbers 
                     h = hlist[i]; 
+                    cout << "HLIST AT " << i << " is: " << hlist[i] << endl; 
                     cout << "H: " << h << endl; 
+                    //TODO - hlist is formed and now the swap has to happen here 
                 }
 
         //     for (int j = 1; j < s.count(); j++) {
