@@ -190,7 +190,7 @@ int ShellSortObject(SortClass& s, int code){
 int main()
 {
 
-    SortClass st(6); //call SortClass 
+    SortClass st(500); //call SortClass 
     SortClass unsorted = st; //stores unsorted st 
 
     // cout << "Calculated SHELL SORT TEST: " << endl; 
