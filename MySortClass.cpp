@@ -81,8 +81,8 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
                 while ((i >= 0) && (s.lessthan(i, i-h))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
                     {
                         cout << "SWAPPING" << endl; 
-                        s.swap(i+h, i); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20. 
-                        i = i + h; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
+                        s.swap(i-h, i); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20. 
+                        i = i - h; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
                     }
                
             }
