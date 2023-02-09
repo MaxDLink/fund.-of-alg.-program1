@@ -139,7 +139,7 @@ int main()
 
     cout << "Shell Sort Object: " << endl; 
     cout << "Unsorted --- Shell Sort ----: " << unsorted << endl; 
-    ShellSort(unsorted, 0); 
+    ShellSort(unsorted, 1); 
     cout << "Sorted: " << unsorted << endl; 
     cout << "Swap count : " << unsorted.getSwapCount() << endl; 
 
