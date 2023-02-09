@@ -176,10 +176,13 @@ int ShellSortObject(SortClass& s, int code){
             // }
             // arr[j] = temp; 
             //TODO - replace the above main logic code for swapping with the below and debug 
+            cout << "GAP: " << gap << endl; 
             int j = i; //sets i = 1. Here, j and i both have index 1 [5]
+            cout << "J: " << j << endl; 
                 while ((j >= 0) && (s.lessthan(j, j-gap))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
                     {
-                        s.swap(j-gap, j); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20. 
+                        s.swap(j-gap, j); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20.
+                        cout << "SWAPPED." << " List is now: " << s << endl;  
                         j = j - gap; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
                     }
         }
@@ -190,7 +193,7 @@ int ShellSortObject(SortClass& s, int code){
 int main()
 {
 
-    SortClass st(500); //call SortClass 
+    SortClass st(80); //call SortClass 
     SortClass unsorted = st; //stores unsorted st 
 
     // cout << "Calculated SHELL SORT TEST: " << endl; 
@@ -202,7 +205,7 @@ int main()
 
     cout << "Shell Sort Object: " << endl; 
     cout << "Unsorted: " << unsorted << endl; 
-    ShellSortObject(unsorted, 3); 
+    ShellSortObject(unsorted, 0); 
     cout << "Sorted: " << unsorted << endl; 
     cout << "Swap count : " << unsorted.getSwapCount() << endl; 
 
