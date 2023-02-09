@@ -196,16 +196,9 @@ int main()
     SortClass st(12); //call SortClass //TODO - array start at 1 instead of 0 so that size of array and gap # line up?
     SortClass unsorted = st; //stores unsorted st //TODO - use copy constructor in MySortClass.cpp with another sortclass object 
 
-    // cout << "Calculated SHELL SORT TEST: " << endl; 
-    // int array[] = {88, 9, 12, 14, 56, 90, 2, 1}; 
-    // calculatedShellSortTest(array, 8, 0); 
-    // for(int i = 0; i < 8; i++){
-    //     cout << array[i] << " "; 
-    // }
-
     cout << "Shell Sort Object: " << endl; 
     cout << "Unsorted: " << unsorted << endl; 
-    ShellSortObject(unsorted, 1); 
+    ShellSort(unsorted, 1); 
     cout << "Sorted: " << unsorted << endl; 
     cout << "Swap count : " << unsorted.getSwapCount() << endl; 
 
@@ -219,14 +212,6 @@ int main()
     cout << "Insertion sort: " << endl; 
     cout << st << endl; 
     cout << "Swap count : " << st.getSwapCount() << endl; 
-
-    // cout << "------\n";
-    // cout << "UNSORTED: " << unsorted << endl; 
-    // ShellSort(unsorted, 1); 
-    // cout << "------\n";
-    // cout << "Shell sort: " << endl; 
-    // cout << unsorted << endl; 
-    // cout << "Swap count : " << unsorted.getSwapCount() << endl;
    
     return 0;
 }
