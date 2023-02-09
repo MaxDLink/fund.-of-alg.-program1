@@ -33,7 +33,6 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
                     l = g * g; 
                     hlist.push_back(l); 
                     g++; 
-                    //l = g * g; //TODO - need this line? 
                 }
                  //print vector 
                 reverse(hlist.begin(), hlist.end());
