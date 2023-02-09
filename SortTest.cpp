@@ -126,14 +126,14 @@ int ShellSortObject(SortClass& s, int code){
     if(code == 0){
         hlist.push_back(1); 
     }
-    if(code == 1){
+    if(code == 1){//sequence: 1, 4, 9
         int g = 1; 
                 int l = 0; 
                 while(l < s.count()){
                     l = g * g; 
                     hlist.push_back(l); 
                     g++; 
-                    l = g * g; //TODO - need this line? 
+                    //l = g * g; //TODO - need this line? 
                 }
                  //print vector 
                 reverse(hlist.begin(), hlist.end());
@@ -193,8 +193,8 @@ int ShellSortObject(SortClass& s, int code){
 int main()
 {
 
-    SortClass st(80); //call SortClass 
-    SortClass unsorted = st; //stores unsorted st 
+    SortClass st(12); //call SortClass //TODO - array start at 1 instead of 0 so that size of array and gap # line up?
+    SortClass unsorted = st; //stores unsorted st //TODO - use copy constructor in MySortClass.cpp with another sortclass object 
 
     // cout << "Calculated SHELL SORT TEST: " << endl; 
     // int array[] = {88, 9, 12, 14, 56, 90, 2, 1}; 
@@ -205,12 +205,13 @@ int main()
 
     cout << "Shell Sort Object: " << endl; 
     cout << "Unsorted: " << unsorted << endl; 
-    ShellSortObject(unsorted, 0); 
+    ShellSortObject(unsorted, 1); 
     cout << "Sorted: " << unsorted << endl; 
     cout << "Swap count : " << unsorted.getSwapCount() << endl; 
 
-
-
+//TODO - can create multiple sort classes in program 
+//TODO - can use copy constructor to copy sort class to another object? 
+//TODO - have to sort the same set 4 different times with code 0, 1, 2, 3 
 
     cout << "\nUNSORTED: " << st << endl; 
     insertionSort(st); //call insertion sort 
