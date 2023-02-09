@@ -26,27 +26,29 @@ int main()
 {   
   //testOneHundredCases(); 
   //TODO - generate 100 lists of n = 500 and make each list unique with .clear? 
-    SortClass st(6); 
-    cout << "ST: " << st << endl; 
+    // SortClass st(6); 
+    // cout << "ST: " << st << endl; 
     //TODO - how to change st to a different set of numbers? 
-    st.clear(false); 
-    st.clear(true); 
-    cout << "ST after clear: " << st << endl; 
-//     SortClass st(500); //call SortClass 
+    // st.clear(false); 
+    // st.clear(true); 
+    // cout << "ST after clear: " << st << endl; 
+    SortClass st(500); //call SortClass 
 
-//     for(int i = 1; i <= 100; i++){//generate 100 different sets of n 500 
+    for(int i = 1; i <= 100; i++){//generate 100 different sets of n 500 
         
-//         SortClass temp = st; //stores unsorted st //TODO - use copy constructor in MySortClass.cpp with another sortclass object
-//         cout << "Unsorted --- Shell Sort ----: " << st << endl; 
-//         for(int code = 0; code < 4; code++){//applies code 0-3 for each of the 100 cases 
-//             cout << "Shell Sort for case: " << i << " with code: " << code << endl; 
-//             //cout << "Case " << i << " is: " << st << endl; 
-//             ShellSort(temp, code); 
-//             //cout << "Sorted: " << st << endl; 
-//             cout << "Swap count : " << temp.getSwapCount() << endl; 
-//         }
-//         SortClass st(500); //randomizes each value in st array 
-//    }
+        SortClass temp = st; //stores unsorted st //TODO - use copy constructor in MySortClass.cpp with another sortclass object
+        //cout << "Unsorted --- Shell Sort ----: " << st << endl; 
+        for(int code = 0; code < 4; code++){//applies code 0-3 for each of the 100 cases 
+            cout << "Shell Sort for case: " << i << " with code: " << code << endl; 
+            //cout << "Case " << i << " is: " << st << endl; 
+            ShellSort(temp, code); 
+            //cout << "Sorted: " << st << endl; 
+            cout << "Swap count : " << temp.getSwapCount() << endl; 
+        }
+        //randomize next set of numbers in st array 
+        st.clear(false); //clears existing numbers in list 
+        st.clear(true);  //generates new random numbers in list 
+   }
   return 0;
 }
 
