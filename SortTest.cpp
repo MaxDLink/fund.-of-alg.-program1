@@ -29,6 +29,7 @@ int main()
     SortClass st(6); 
     cout << "ST: " << st << endl; 
     //TODO - how to change st to a different set of numbers? 
+    st.clear(false); 
     st.clear(true); 
     cout << "ST after clear: " << st << endl; 
 //     SortClass st(500); //call SortClass 
