@@ -29,7 +29,8 @@ int main()
     SortClass st(6); 
     cout << "ST: " << st << endl; 
     //TODO - how to change st to a different set of numbers? 
-    
+    st.clear(true); 
+    cout << "ST after clear: " << st << endl; 
 //     SortClass st(500); //call SortClass 
 
 //     for(int i = 1; i <= 100; i++){//generate 100 different sets of n 500 
