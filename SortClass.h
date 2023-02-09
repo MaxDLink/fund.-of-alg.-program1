@@ -34,3 +34,5 @@ private:
 };
 
 void ShellSort(SortClass&, int code);
+
+void testOneHundredCases(); //TODO - take out later when  done testing? Will not be included in prof's SortClass.h header 

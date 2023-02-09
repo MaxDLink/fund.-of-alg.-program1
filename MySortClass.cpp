@@ -15,6 +15,24 @@ void printVector(vector <int> vect){
     }
 	cout << endl; 
 }
+
+void testOneHundredCases(){
+//     SortClass st(500); //call SortClass 
+
+//     for(int i = 1; i <= 100; i++){//generate 100 different sets of n 500 
+        
+//         SortClass temp = st; //stores unsorted st //TODO - use copy constructor in MySortClass.cpp with another sortclass object
+//         cout << "Unsorted --- Shell Sort ----: " << st << endl; 
+//         for(int code = 0; code < 4; code++){//applies code 0-3 for each of the 100 cases 
+//             cout << "Shell Sort for case: " << i << " with code: " << code << endl; 
+//             //cout << "Case " << i << " is: " << st << endl; 
+//             ShellSort(temp, code); 
+//             //cout << "Sorted: " << st << endl; 
+//             cout << "Swap count : " << temp.getSwapCount() << endl; 
+//         }
+//         SortClass st(500); //randomizes each value in st array 
+//    }
+}
 void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the SortClass object, code: an integer denoting how the hlist array is to be formed (0, 1, 2, 3, print error message & exit program)
  if(code > 3){//exits program if code is not 0, 1, 2, 3
         cout << "Code was not 0, 1, 2, or 3. Exiting program!" << endl; 
