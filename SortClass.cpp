@@ -11,8 +11,8 @@ SortClass::SortClass(int n, bool genRandom) //create a sortclass object that sto
 {
     swapCount = 0;
     if (genRandom) 
-	{
-            srand(time(0));
+	{	//TODO - reenable if random # gen does not work 
+            //srand(time(0)); 
 	    for (int i = 0; i < n; i++)
 		array.push_back((rand() % 1000) * 1.0);
 	}
