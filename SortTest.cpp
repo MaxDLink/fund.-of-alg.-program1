@@ -34,7 +34,7 @@ int main()
 
   for(int i = 0; i < 100; i++){
 
-    SortClass st(500, true); //generate random # when called everytime 
+    SortClass st(20, true); //generate random # when called everytime 
     SortClass unsorted = st; //unsorted holds st list 
      for(int code = 0; code < 4; code++){//applies code 0-3 for each of the 100 cases 
             st = unsorted; //gives st the unsorted list to resort 
@@ -49,46 +49,6 @@ int main()
     
 
   }
-    
   
-
-  //   for(int i = 1; i <= 100; i++){//generate 100 different sets of n 500 
-
-  //       //  SortClass st(20, true); //call SortClass & generate a unique list of numbers 
-        
-  //       //cout << "Unsorted --- Shell Sort ----: " << st << endl; 
-  //       SortClass st(6, true); //call SortClass & generate a unique list of numbers 
-  //       for(int code = 0; code < 4; code++){//applies code 0-3 for each of the 100 cases 
-           
-  //           //cout << "Shell Sort for case: " << i << " with code: " << code << endl; 
-  //           //cout << "Case " << i << " is: " << st << endl; 
-  //           ShellSort(st, code); 
-  //           cout << "Sorted: " << st << endl; 
-  //           cout << "Swap count for case: " << i << " With code: " << code << " is: " << st.getSwapCount() << endl; //TODO - swap amounts shouldnt be the same for different code entries. check shellsort algo for correctness? 
-  //           st.clear(true); //sets everything to zero and resets swap count to zero 
-  //       }
-  //       //randomize next set of numbers in st array 
-  //       // st.clear(false); //clears existing numbers in list 
-  //       // st.clear(true);  //generates new random numbers in list 
-  //  }
   return 0;
 }
-
-//TODO - can create multiple sort classes in program 
-//TODO - can use copy constructor to copy sort class to another object? 
-//TODO - have to sort the same set 4 different times with code 0, 1, 2, 3 
-    //SortClass st(20); 
-    // SortClass unsortedShell = st; 
-    // cout << "\nUNSORTED --- Shell Sort ----: " << unsortedShell << endl; 
-    // ShellSort(unsortedShell, 0); //call insertion sort 
-    // cout << "------\n";
-    // cout << "ShellSort: " << endl; 
-    // cout << unsortedShell << endl; 
-    // cout << "Swap count : " << unsortedShell.getSwapCount() << endl;
-
-    // cout << "\nUNSORTED --- Insertion Sort ----: " << st << endl; 
-    // insertionSort(st); //call insertion sort 
-    // cout << "------\n";
-    // cout << "Insertion sort: " << endl; 
-    // cout << st << endl; 
-    // cout << "Swap count : " << st.getSwapCount() << endl;

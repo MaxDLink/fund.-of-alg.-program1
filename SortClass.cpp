@@ -3,7 +3,6 @@
 #include <cstdlib>
 #include <ctime>
 #include "SortClass.h"
-
 using namespace std;
 
 
@@ -26,7 +25,7 @@ SortClass::SortClass(int n, bool genRandom) //create a sortclass object that sto
 SortClass::SortClass(const SortClass& st) //copy constructor 
 {
    swapCount = st.swapCount;
-   for (int i = 0 ; i < st.array.size(); i++)
+   for (size_t i = 0 ; i < st.array.size(); i++)
 	array.push_back(st.array[i]);
 
 }
@@ -47,12 +46,12 @@ void SortClass::clear(bool genRandom) //if genRandom is true, than assign a rand
     if (genRandom) 
 	{
             srand(time(0));
-	    for (int i = 0; i < array.size(); i++)
+	    for (size_t i = 0; i < array.size(); i++)
 		array[i] = rand() * 1.0;
 	}
     else
 	{
-	    for (int i = 0; i < array.size(); i++)
+	    for (size_t i = 0; i < array.size(); i++)
 		array[i] = 0.0;
 	}
 }
@@ -73,7 +72,7 @@ void SortClass::swap(int i, int j) //swap array[i] with array[j]; increment swap
 
 ostream& operator<<(ostream& os, SortClass& s) //output the content of the array. Add a newline character for every 10 items output 
 {
-    for (int i = 0; i < s.array.size(); i++)
+    for (size_t i = 0; i < s.array.size(); i++)
 	{
 	    if (!(i % 10))
 		os << endl;
@@ -84,7 +83,7 @@ ostream& operator<<(ostream& os, SortClass& s) //output the content of the array
 
 istream& operator>>(istream& is, SortClass& s)//read the value of the items from the input stream (items are stored from the first item to the last)
 {
-    for (int i = 0; i < s.array.size(); i++)
+    for (size_t i = 0; i < s.array.size(); i++)
 	{
 	    is >> s.array[i];
 	}
