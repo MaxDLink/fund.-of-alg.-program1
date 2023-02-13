@@ -1,9 +1,9 @@
 #include <iostream> 
 #include "SortClass.h"
 
-#include "vector" //TODO - put in own function? 
-#include <cmath> //TODO - put in own function? 
-#include <algorithm> //TODO - put in own function?; 
+#include "vector"
+#include <cmath> 
+#include <algorithm>  
 
 using namespace std; 
 
@@ -66,14 +66,10 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
             //     arr[j] = arr[j-gap]; 
             // }
             // arr[j] = temp; 
-            //TODO - replace the above main logic code for swapping with the below and debug 
-            //cout << "GAP: " << gap << endl; //TODO - take out when done analyzing shellsort 
             int j = i; //sets i = 1. Here, j and i both have index 1 [5]
-            //cout << "J: " << j << endl; //TODO - take out when done analyzing shellsort 
                 while ((j >= 0) && (s.lessthan(j, j-gap))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
                     {//TODO - swap causing malloc error 
                         s.swap(j-gap, j); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20.
-                        //cout << "SWAPPED." << " List is now: " << s << endl;  //TODO - take out when done analyzing shellsort 
                         j = j - gap; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
                     }
         }
