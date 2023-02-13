@@ -34,13 +34,13 @@ int main()
 
   for(int i = 1; i <= 100; i++){
 
-    SortClass st(20, true); //generate random # when called everytime 
+    SortClass st(1000, true); //generate random # when called everytime 
     SortClass unsorted = st; //unsorted holds st list 
      for(int code = 0; code < 4; code++){//applies code 0-3 for each of the 100 cases 
             st = unsorted; //gives st the unsorted list to resort 
             //cout << "Shell Sort for case: " << i << " with code: " << code << endl; 
             //cout << "Case " << i << " is: " << st << endl; 
-            ShellSort(st, code); 
+            ShellSort(st, code); //TODO - fix malloc error in shellsort 
             //cout << "Sorted: " << st << endl; 
             cout << "case: " << i << ", code: " << code << ", SwapCount: " << st.getSwapCount() << endl; //TODO - swap amounts shouldnt be the same for different code entries. check shellsort algo for correctness? 
         }
