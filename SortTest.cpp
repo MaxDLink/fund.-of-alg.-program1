@@ -32,7 +32,7 @@ int main()
   //testOneHundredCases(); 
   //TODO - generate 100 lists of n = 500 and make each list unique with .clear? 
 
-  for(int i = 0; i < 100; i++){
+  for(int i = 1; i <= 100; i++){
 
     SortClass st(20, true); //generate random # when called everytime 
     SortClass unsorted = st; //unsorted holds st list 
