@@ -46,8 +46,6 @@ int main()
         }
 
     //cout << "ST with case: " << i << ": " << st << endl; 
-    
-
   }
   
   return 0;

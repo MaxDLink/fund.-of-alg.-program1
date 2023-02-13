@@ -8,7 +8,6 @@
 using namespace std; 
 
 void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the SortClass object, code: an integer denoting how the hlist array is to be formed (0, 1, 2, 3, print error message & exit program)
-//TODO - same swap amount everytime why? Because algorithm bad? How is the algorithm swapping? 
  if(code > 3){//exits program if code is not 0, 1, 2, 3
         cout << "Code was not 0, 1, 2, or 3. Exiting program!" << endl; 
         return; //returns to exit function; 
@@ -31,7 +30,7 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
                 reverse(hlist.begin(), hlist.end());
     }
     if(code == 2){
-         int l = 0; 
+        int l = 0; 
         int g = 0; 
         while(g < s.count()){//stops at h = 31 //g = 7 stop at 7 
                     //cout << "S: " << s.count() << endl; 
@@ -72,7 +71,7 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
             int j = i; //sets i = 1. Here, j and i both have index 1 [5]
             //cout << "J: " << j << endl; //TODO - take out when done analyzing shellsort 
                 while ((j >= 0) && (s.lessthan(j, j-gap))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
-                    {
+                    {//TODO - swap causing malloc error 
                         s.swap(j-gap, j); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20.
                         //cout << "SWAPPED." << " List is now: " << s << endl;  //TODO - take out when done analyzing shellsort 
                         j = j - gap; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
