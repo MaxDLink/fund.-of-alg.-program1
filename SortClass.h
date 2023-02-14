@@ -11,9 +11,11 @@ friend istream& operator>>(istream& os, SortClass& s);
 public:
 
 
-    SortClass(int n, bool genRandom = true);
+    SortClass(int n, bool genRandom = true); //constructor 
 
-    SortClass(const SortClass&);
+    SortClass(const SortClass&); //copy constructor 
+
+    ~SortClass(); //destructor 
 
     void clear(bool genRandom = true);
 
