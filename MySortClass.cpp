@@ -22,7 +22,7 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
     //TODO - causes malloc error 
         int g = 1; 
                 int l = 0; 
-                while(l <= s.count()){
+                while(l < s.count()){
                     l = g * g; 
                     if(l <= s.count()){//TODO - only push back values less than or equal to the amount of elements 
                         hlist.push_back(l); 
@@ -52,8 +52,7 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
             }else{
                 break; 
             }
-                    
-}
+    }
         //print vector 
         reverse(hlist.begin(), hlist.end()); //7, 3, 1        
     }
