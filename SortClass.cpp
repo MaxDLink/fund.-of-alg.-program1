@@ -29,6 +29,7 @@ SortClass::SortClass(const SortClass& st) //copy constructor
 	array.push_back(st.array[i]);
 
 }
+
 SortClass::~SortClass() //destructor 
 {
 
