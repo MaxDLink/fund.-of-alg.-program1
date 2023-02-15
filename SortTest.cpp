@@ -29,7 +29,7 @@ int main()
 
   for(int i = 1; i <= 100; i++){
 
-       SortClass st(4000); //generate random # when called everytime 
+       SortClass st(1000); //generate random # when called everytime 
        SortClass unsorted = st; //unsorted holds st list 
 
    for(int code = 0; code < 4; code++){//applies code 0-3 for each of the 100 cases 
@@ -42,7 +42,7 @@ int main()
             //Use a table to record the average/standard derivation of number of swaps of each case for each different N. Those 100 cases of N are averaged. 
             //cout << "Sorted: " << st << endl; 
             cout << "case: " << i << ", code: " << i << ", SwapCount: " << st.getSwapCount() << endl;
-     }
+    }
       //destroy the st object vector and unsorted object vector to avoid overloading memory 
       // st.~SortClass();
       // unsorted.~SortClass(); 
