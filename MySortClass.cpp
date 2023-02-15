@@ -14,7 +14,7 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
     }
     else{
          int gap = 0; 
-    vector <int> hlist; //Can Hlist be a vector or does it have to be an array? start at 1 or keep at 0 for initial index? 
+    vector <int> hlist; 
     if(code == 0){
         hlist.push_back(1); 
     }

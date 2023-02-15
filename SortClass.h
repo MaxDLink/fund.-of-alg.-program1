@@ -15,8 +15,8 @@ public:
 
     SortClass(const SortClass&); //copy constructor 
 
-    ~SortClass() = default; //destructor 
-   //~SortClass(); 
+   // ~SortClass() = default; //destructor 
+   ~SortClass(); 
 
     void clear(bool genRandom = true);
 
@@ -32,7 +32,7 @@ private:
 
 
     int swapCount; //keeps track fo how many swaps have occurred 
-    vector<float> array; //vector array that contains floating point numbers to be sorted 
+    vector<float> array; //vector array that contains floating point numbers to be sorted
 
 };
 

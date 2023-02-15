@@ -32,7 +32,7 @@ SortClass::SortClass(const SortClass& st) //copy constructor
 
 SortClass::~SortClass() //destructor 
 {
-
+	
 }
 
 
