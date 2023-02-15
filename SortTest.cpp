@@ -14,6 +14,7 @@ void insertionSort(SortClass &s) //sort the items in s by insertion sort
 	   int i = j; //sets i = 1. Here, j and i both have index 1 [5]
 	   while ((i >= 0) && (s.lessthan(i, i-1))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
 		{
+      //TODO- >= causes memory leak for insertion sort and should be changed to > 
 		   s.swap(i-1, i); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20. 
 		   i--; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
 		}
@@ -29,7 +30,7 @@ int main()
 
   for(int i = 1; i <= 100; i++){
 
-       SortClass st(1000); //generate random # when called everytime 
+       SortClass st(4000); //generate random # when called everytime 
        SortClass unsorted = st; //unsorted holds st list 
 
    for(int code = 0; code < 4; code++){//applies code 0-3 for each of the 100 cases 
