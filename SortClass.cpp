@@ -69,7 +69,7 @@ bool SortClass::lessthan(int i, int j) //returns true iff array[i] < array[j]. i
 }
 
 void SortClass::swap(int i, int j) //swap array[i] with array[j]; increment swapCount by 1
-{//TODO - fix malloc error that is in this function 
+{
     float temp = array[i]; //arr[0] == 20 
     array[i] = array[j]; //arr[0] = arr[1]. 20 = 5 
     array[j] = temp; //arr[1] = 20. 
@@ -95,4 +95,4 @@ istream& operator>>(istream& is, SortClass& s)//read the value of the items from
 	}
     return is;
 }
-//TODO - need destructor in this class to clear memory 
+
