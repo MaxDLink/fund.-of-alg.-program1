@@ -15,7 +15,6 @@ public:
 
     SortClass(const SortClass&); //copy constructor 
 
-   // ~SortClass() = default; //destructor 
    ~SortClass(); 
 
     void clear(bool genRandom = true);
