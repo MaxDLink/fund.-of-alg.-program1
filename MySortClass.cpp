@@ -77,7 +77,7 @@ void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the So
         for(int i = gap; i < s.count(); i += 1){
            
             int j = i; //sets i = 1. Here, j and i both have index 1 [5]
-                while ((j >= 0) && (s.lessthan(j, j-gap))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
+                while ((j >= gap) && (s.lessthan(j, j-gap))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
                     {
                         s.swap(j-gap, j); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20.
                         j = j - gap; //decrement i by 1 so that i is 0 and the while loop breaks in the less than comparison 
