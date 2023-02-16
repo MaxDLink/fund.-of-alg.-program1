@@ -42,7 +42,7 @@ int main()
         
             //Use a table to record the average/standard derivation of number of swaps of each case for each different N. Those 100 cases of N are averaged. 
             //cout << "Sorted: " << st << endl; 
-            cout << "case: " << i << ", code: " << i << ", SwapCount: " << st.getSwapCount() << endl;
+            cout << code << ", SwapCount: " << st.getSwapCount() << endl;
     }
       //destroy the st object vector and unsorted object vector to avoid overloading memory 
       // st.~SortClass();
