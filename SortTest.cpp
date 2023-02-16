@@ -12,7 +12,7 @@ void insertionSort(SortClass &s) //sort the items in s by insertion sort
     for (int j = 1; j < s.count(); j++) 
 	{
 	   int i = j; //sets i = 1. Here, j and i both have index 1 [5]
-	   while ((i >= 0) && (s.lessthan(i, i-1))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
+	   while ((i > 0) && (s.lessthan(i, i-1))) //less than takes in 1, and 0. comparing 5 to 20 and 5 < 20 true 
 		{
       //TODO- >= causes memory leak for insertion sort and should be changed to > 
 		   s.swap(i-1, i); //0 and 1. Now array is: [5, 20, 40, 60, 10, 30]. just swapped 5 and 20. 
