@@ -8,7 +8,7 @@
 using namespace std; 
 
 void ShellSort(SortClass& s, int code){//implementation of ShellSort - s: the SortClass object, code: an integer denoting how the hlist array is to be formed (0, 1, 2, 3, print error message & exit program)
- if(code > 3){//exits program if code is not 0, 1, 2, 3
+ if(code < 0 || code > 3){//exits program if code is not 0, 1, 2, 3
         cout << "Code was not 0, 1, 2, or 3. Exiting program!" << endl; 
         return; //returns to exit function; 
     }
