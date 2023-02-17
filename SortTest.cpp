@@ -30,7 +30,7 @@ int main()
   srand(time(0)); //added here for random # gen and srand in sort class disabled 
    SortClass st(5000); 
    auto start = high_resolution_clock::now(); //starts the clock now 
-   ShellSort(st, 3); 
+   ShellSort(st, 3); //ShellSort(st, (either 0, 1, 2, 3))
    auto stop = high_resolution_clock::now(); 
    auto duration = duration_cast<microseconds> (stop - start); //difference between stop and start casted as microseconds 
    cout << "Duration: " << duration.count() << endl; 
